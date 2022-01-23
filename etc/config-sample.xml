@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config>
+	<service>
+		<logbackXmlPath>etc/logback.xml</logbackXmlPath>
+	</service>
+    <mqtt>
+		<brokers>
+			<broker>
+				<host>1.example.com</host>
+				<port>1883</port>
+				<username>test</username>		
+				<password>test</password>		
+				<qosPublish>AT_MOST_ONCE</qosPublish>
+				<qosSubscribe>AT_MOST_ONCE</qosSubscribe>
+				<retain>false</retain>
+			</broker>
+			<broker>
+				<host>2.example.com</host>
+				<port>1883</port>
+				<username>test</username>		
+				<password>test</password>		
+				<qosPublish>AT_MOST_ONCE</qosPublish>
+				<qosSubscribe>AT_MOST_ONCE</qosSubscribe>
+				<retain>false</retain>
+			</broker>
+		</brokers>
+		<reconnectTimeoutValue>5</reconnectTimeoutValue>
+		<reconnectTimeoutUnit>SECONDS</reconnectTimeoutUnit>	
+    </mqtt>
+	<topics>
+		<topic planet="SUN" group="RISE" channel="START">astro/sun/rise/start</topic>
+		<topic planet="SUN" group="SET" channel="START">astro/sun/set/start</topic>
+	</topics>
+    <astro>
+		<latitude>50.5200066</latitude>
+		<longitude>10.4049540</longitude>
+		<altitude></altitude>
+    </astro>
+</config>
